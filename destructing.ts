@@ -1,43 +1,5 @@
-enum Category { Poetry, Fiction}
+import { Book, Category, getAllBooks } from './helper';
 
-interface Book {
-  id: number;
-  title: string;
-  author: string;
-  available: boolean;
-  category: Category;
-}
-
-function getAllBooks(): Book[] {
-
-  return [
-    {
-      id: 1,
-      title: 'Ulysses',
-      author: 'James Joyce',
-      available: true,
-      category: Category.Fiction
-    }, {
-      id: 2,
-      title: 'A Farewell to Arms',
-      author: 'Ernest Hemingway',
-      available: false,
-      category: Category.Fiction
-    }, {
-      id: 3,
-      title: 'I Know Why the Caged Bird Sings',
-      author: 'Maya Angelou',
-      available: true,
-      category: Category.Poetry
-    }, {
-      id: 4,
-      title: 'Moby Dick',
-      author: 'Herman Melville',
-      available: true,
-      category: Category.Fiction
-    }
-  ];
-}
 
 
 function printBookInfo({ title, author }: Book): void {
